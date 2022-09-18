@@ -16,17 +16,12 @@ mutation addUser($username: String!, $password: String!, $email: String!) {
   addUser(username: $username, password: $password, email: $email) {
     
     user {
+     token
+     user {
       _id
       username
-      email
-      bookCount
-      savedBooks {
-        authors
-        bookId
-        image
-        link
-        title
-        description
+     }
+    
       }
     }
     token
